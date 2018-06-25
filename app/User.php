@@ -27,7 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-     public function items()
+    public function items()
     {
         return $this->belongsToMany(Item::class)->withPivot('type')->withTimestamps();
     }
@@ -76,6 +76,7 @@ class User extends Authenticatable
             return $item_code_exists;
         }
     }
+
     
     
     public function have_items()
